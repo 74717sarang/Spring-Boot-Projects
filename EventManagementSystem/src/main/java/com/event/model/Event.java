@@ -33,26 +33,28 @@ public class Event {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long event_id;
 
-	@NotBlank
+//	@NotBlank(message = "Event name is required")
 	private String event_name;
 
-	@NotBlank
+	
+
+//	@NotBlank(message = "Client name is required")
 	private String client_name;
+
 
 	@Enumerated(EnumType.STRING)
 	@NotNull
 	private Type event_type;
 
-	@NotBlank
 	private double budge;
 
-	@NotBlank
+	
 	private String contactNo;
 
-	@Future
+	
 	private LocalDateTime date_of_booking;
 
-	@NotBlank
+	
 	private String city;
 
 }
